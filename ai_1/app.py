@@ -1,17 +1,3 @@
-#
-# Author: <YOUR_FULL_NAME>  |  Index: <YOUR_INDEX_NUMBER>
-# ---------------------------------------------------------------------------
-# app.py — Streamlit UI for the manual RAG pipeline (CS4241 / Academic City).
-#
-# Run from the ``ai_1`` project folder::
-#
-#     streamlit run app.py
-#
-# This file only orchestrates your existing ``src.*`` modules; it does not
-# implement retrieval or generation logic itself.
-#
-
-
 from __future__ import annotations
 
 import os
@@ -23,9 +9,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# -----------------------------------------------------------------------------
 # Path setup (so ``import src...`` works when Streamlit launches this file)
-# -----------------------------------------------------------------------------
+
 PROJECT_ROOT = Path(__file__).resolve().parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
@@ -444,7 +429,7 @@ def main() -> None:
 
     cfg = render_sidebar()
 
-    st.title("Academic City - Insight Engine")
+    st.title("BND's - Insight Engine")
     st.markdown(
         """
 This app runs a **fully manual** RAG stack: ingest → chunk → embed →
